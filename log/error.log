@@ -1,0 +1,1 @@
+2019-05-20 13:11:19.290 [error] <0.170.0> Supervisor 'Elixir.Logger.Supervisor' had child 'Elixir.Logger.ErrorHandler' started with 'Elixir.Logger.Watcher':watcher(error_logger, 'Elixir.Logger.ErrorHandler', {true,false,500}) at <0.175.0> exit with reason normal in context child_terminated
