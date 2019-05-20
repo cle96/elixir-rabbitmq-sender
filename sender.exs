@@ -10,8 +10,12 @@ defmodule Rabbit do
 	end
 end
 
-{:ok, connection} = AMQP.Connection.open username: "user",
-                                         password: "pass"
+user = System.get_env("username")
+pass = System.get_env("password")
+host = System.get_env("host")
+{:ok, connection} = AMQP.Connection.open username: user,
+       	                                 password: pass,
+				         host: host
 
 {:ok, channel} = AMQP.Channel.open(connection)
 AMQP.Queue.declare(channel, "catalog-worker")
